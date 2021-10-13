@@ -2,6 +2,8 @@
 ###############################################################################
 # Network interface definitions for the seed group.
 
+compute_net_interface: ens18
+
 # Overcloud provisioning network IP information.
 # provision_oc_net_interface:
 # provision_oc_net_bridge_ports:

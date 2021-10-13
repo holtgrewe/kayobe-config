@@ -4,6 +4,9 @@
 ###############################################################################
 # Bifrost installation.
 
+# Enable debugging (unclear if this works).
+kolla_bifrost_debug: true
+
 # URL of Bifrost source code repository.
 #kolla_bifrost_source_url:
 
@@ -30,7 +33,9 @@
 #kolla_bifrost_dib_elements_default:
 
 # List of additional DIB elements. Default is none.
-#kolla_bifrost_dib_elements_extra:
+kolla_bifrost_dib_elements_extra:
+  - "devuser"
+  - "dynamic-login"
 
 # List of DIB elements. Default is a combination of
 # kolla_bifrost_dib_elements_default and kolla_bifrost_dib_elements_extra.
@@ -44,7 +49,10 @@
 #kolla_bifrost_dib_env_vars_default:
 
 # DIB additional environment variables. Default is none.
-#kolla_bifrost_dib_env_vars_extra:
+kolla_bifrost_dib_env_vars_extra:
+  DIB_DEV_USER_USERNAME: "devuser"
+  DIB_DEV_USER_PASSWORD: "calvin"
+  DIB_DEV_USER_PWDLESS_SUDO: "yes"
 
 # DIB environment variables. Default is combination of
 # kolla_bifrost_dib_env_vars_default and kolla_bifrost_dib_env_vars_extra.
@@ -57,11 +65,13 @@
 # Ironic configuration.
 
 # List of hardware types to enable for Bifrost's Ironic.
-#kolla_bifrost_enabled_hardware_types:
+kolla_bifrost_enabled_hardware_types:
+  - idrac
+  - ipmi
 
 # List of extra kernel parameters for Bifrost's Ironic PXE configuration.
 # Default is empty.
-#kolla_bifrost_extra_kernel_options:
+# kolla_bifrost_extra_kernel_options:
 
 ###############################################################################
 # Ironic Inspector configuration.
@@ -80,10 +90,10 @@
 #kolla_bifrost_inspector_rules:
 
 # Ironic inspector IPMI username to set.
-#kolla_bifrost_inspector_ipmi_username:
+kolla_bifrost_inspector_ipmi_username: root
 
 # Ironic inspector IPMI password to set.
-#kolla_bifrost_inspector_ipmi_password:
+kolla_bifrost_inspector_ipmi_password: calvin
 
 # Ironic inspector network interface name on which to check for an LLDP switch
 # port description to use as the node's name.

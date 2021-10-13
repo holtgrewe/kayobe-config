@@ -1,3 +1,5 @@
+/etc/kayobe/kolla/passwords.yml
+
 *.py[cod]
 
 # C extensions

@@ -1,0 +1,21 @@
+# Kayobe hosts inventory file. This file should be modified to define the hosts
+# and their top-level group membership.
+
+# This host acts as the configuration management Ansible control host. This must be
+# localhost.
+localhost ansible_connection=local
+
+[seed]
+stack-seed
+
+[controllers]
+#stack-1 ipmi_address=stack-1-bmc bmc_type=idrac
+#stack-2 ipmi_address=stack-2-bmc bmc_type=idrac
+#stack-3 ipmi_address=stack-3-bmc bmc_type=idrac
+#stack-4 ipmi_address=stack-4-bmc bmc_type=idrac
+
+[compute:children]
+controllers
+
+[baremetal-compute]
+# Add baremetal compute nodes here if required.

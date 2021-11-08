@@ -66,8 +66,8 @@ tunnel_net_name: compute_net
 compute_net_cidr: 172.16.32.0/19
 compute_net_gateway: 172.16.32.1
 compute_net_vip_address: 172.16.32.2
-compute_net_allocation_pool_start: 172.16.32.101
-compute_net_allocation_pool_end: 172.16.32.200
+compute_net_allocation_pool_start: 172.16.32.11
+compute_net_allocation_pool_end: 172.16.32.20
 compute_net_inspection_allocation_pool_start: 172.16.32.201
 compute_net_inspection_allocation_pool_end: 172.16.32.250
 

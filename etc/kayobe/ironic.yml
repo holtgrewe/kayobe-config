@@ -3,7 +3,9 @@
 # Ironic configuration.
 
 # Specify the list of hardware types to load during service initialization.
-#kolla_ironic_enabled_hardware_types:
+kolla_ironic_enabled_hardware_types:
+  - ipmi
+  - idrac
 
 # Specify the list of bios interfaces to load during service initialization.
 #kolla_ironic_enabled_bios_interfaces:
@@ -105,7 +107,8 @@
 #kolla_ironic_pxe_append_params_default:
 
 # List of additional kernel parameters to append for baremetal PXE boot.
-#kolla_ironic_pxe_append_params_extra:
+kolla_ironic_pxe_append_params_extra:
+  - "console=ttyS1,115200n8r"
 
 # List of kernel parameters to append for baremetal PXE boot.
 #kolla_ironic_pxe_append_params:

@@ -9,10 +9,10 @@ localhost ansible_connection=local
 stack-seed
 
 [controllers]
-#stack-1 ipmi_address=stack-1-bmc bmc_type=idrac
-#stack-2 ipmi_address=stack-2-bmc bmc_type=idrac
-#stack-3 ipmi_address=stack-3-bmc bmc_type=idrac
-#stack-4 ipmi_address=stack-4-bmc bmc_type=idrac
+stack-1 ipmi_address=stack-1-bmc bmc_type=idrac
+stack-2 ipmi_address=stack-2-bmc bmc_type=idrac
+stack-3 ipmi_address=stack-3-bmc bmc_type=idrac
+stack-4 ipmi_address=stack-4-bmc bmc_type=idrac
 
 [compute:children]
 controllers

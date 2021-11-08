@@ -4,8 +4,8 @@
 
 
 [controllers]
-stack-1 ipmi_address=172.16.66.41 bmc_type=idrac
-stack-2 ipmi_address=172.16.66.42 bmc_type=idrac
-stack-3 ipmi_address=172.16.66.43 bmc_type=idrac
-stack-4 ipmi_address=172.16.66.44 bmc_type=idrac
+stack-1 ipmi_address=stack-1-bmc.cubi.bihealth.org bmc_type=idrac
+stack-2 ipmi_address=stack-2-bmc.cubi.bihealth.org bmc_type=idrac
+stack-3 ipmi_address=stack-3-bmc.cubi.bihealth.org bmc_type=idrac
+stack-4 ipmi_address=stack-4-bmc.cubi.bihealth.org bmc_type=idrac
 

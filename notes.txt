@@ -1,0 +1,25 @@
+for i in {1..4}; do
+    baremetal node set stack-$i \
+        --driver idrac \
+        --bios-interface idrac-redfish \
+        --boot-interface idrac-redfish-virtual-media \
+        --deploy-interface ramdisk \
+        --management-interface idrac-redfish \
+        --power-interface idrac-redfish \
+        --raid-interface no-raid \
+        --rescue-interface no-rescue \
+        --vendor-interface no-vendor \
+        --driver-info ipmi_username=root \
+        --driver-info ipmi_password=calvin \
+        --driver-info ipmi_address=stack-$i-bmc.cubi.bihealth.org \
+        --driver-info redfish_username=root \
+        --driver-info redfish_password=calvin \
+        --driver-info redfish_address=stack-$i-bmc.cubi.bihealth.org \
+        --driver-info redfish_verify_ca=false \
+        --driver-info redfish_system_id=/redfish/v1/Systems/System.Embedded.1 \
+        --driver-info drac_username=root \
+        --driver-info drac_password=calvin \
+        --driver-info drac_address=stack-$i-bmc.cubi.bihealth.org \
+        --driver-info drac_verify_ca=false;
+done
+

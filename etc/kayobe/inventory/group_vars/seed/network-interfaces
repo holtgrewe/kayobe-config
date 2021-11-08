@@ -2,6 +2,10 @@
 ###############################################################################
 # Network interface definitions for the seed group.
 
+compute_net_interface: eth0
+# Route via stack-seed-hypervisor.cubi.bihealth.org
+compute_net_gateway: 172.16.32.9
+
 # Overcloud provisioning network IP information.
 # provision_oc_net_interface:
 # provision_oc_net_bridge_ports:

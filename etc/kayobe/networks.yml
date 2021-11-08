@@ -5,45 +5,47 @@
 # Network role to network mappings.
 
 # Name of the network used for admin access to the overcloud
-#admin_oc_net_name:
+admin_oc_net_name: compute_net
 
 # Name of the network used by the seed to manage the bare metal overcloud
 # hosts via their out-of-band management controllers.
-#oob_oc_net_name:
+oob_oc_net_name: compute_net
 
 # Name of the network used by the seed to provision the bare metal overcloud
 # hosts.
-#provision_oc_net_name:
+provision_oc_net_name: compute_net
 
 # Name of the network used by the overcloud hosts to manage the bare metal
 # compute hosts via their out-of-band management controllers.
-#oob_wl_net_name:
+oob_wl_net_name: compute_net
 
 # Name of the network used by the overcloud hosts to provision the bare metal
 # workload hosts.
-#provision_wl_net_name:
+provision_wl_net_name: compute_net
 
 # Name of the network used to expose the internal OpenStack API endpoints.
-#internal_net_name:
+internal_net_name: compute_net
 
 # List of names of networks used to provide external network access via
 # Neutron.
 # Deprecated name: external_net_name
 # If external_net_name is defined, external_net_names will default to a list
 # containing one item, external_net_name.
-#external_net_names:
+external_net_names:
+  - compute_net
 
 # Name of the network used to expose the public OpenStack API endpoints.
-#public_net_name:
+public_net_name:
+  - compute_net
 
 # Name of the network used by Neutron to carry tenant overlay network traffic.
-#tunnel_net_name:
+tunnel_net_name: compute_net
 
 # Name of the network used to carry storage data traffic.
-#storage_net_name:
+storage_net_name: compute_net
 
 # Name of the network used to carry storage management traffic.
-#storage_mgmt_net_name:
+storage_mgmt_net_name: compute_net
 
 # Name of the network used to carry swift storage data traffic.
 #swift_storage_net_name:
@@ -61,6 +63,22 @@
 
 ###############################################################################
 # Network definitions.
+
+compute_net_cidr: 172.16.32.0/19
+compute_net_gateway: 172.16.32.1
+compute_net_internal_vip_address: 172.16.32.5
+compute_net_external_vip_address: 172.16.32.5
+compute_net_internal_fqdn: stack-api.cubi.bihealth.org
+compute_net_external_fqdn: stack-api.cubi.bihealth.org
+compute_net_allocation_pool_start: 172.16.32.11
+compute_net_allocation_pool_end: 172.16.32.20
+compute_net_inspection_allocation_pool_start: 172.16.32.201
+compute_net_inspection_allocation_pool_end: 172.16.32.210
+compute_net_neutron_allocation_pool_start: 172.16.32.211
+compute_net_neutron_allocation_pool_end: 172.16.32.220
+compute_net_libvirt_network_name: compute_net
+
+ceph_cluster_net_cidr: 192.168.2.0/24
 
 # Admin network IP information.
 # admin_oc_net_cidr:

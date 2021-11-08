@@ -1,6 +1,6 @@
 ---
 ###############################################################################
-# Network interface definitions for the controller group.
+# Network interface definitions for the baremetal-compute group.
 
 # bridge on bond0 is for the compute network.
 compute_net_interface: brbond0
@@ -10,18 +10,10 @@ compute_net_bridge_ports:
 # bond0 is for the compute node.
 bond0_interface: bond0
 bond0_bond_slaves:
-  - ens3f0
-  - ens3f1
+  - p4p1
+  - p4p2
 bond0_bond_mode: 802.3ad
 bond0_bond_miimon: 100
-
-# bond1 is interace on Ceph cluster network.
-cephcluster_net_interface: bond1
-cephcluster_net_bond_slaves:
-  - ens4f0
-  - ens4f1
-cephcluster_bond_mode: 802.3ad
-cephcluster_bond_miimon: 100
 
 # Overcloud provisioning network IP information.
 # provision_oc_net_interface:

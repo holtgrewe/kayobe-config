@@ -1,0 +1,3 @@
+compute_net_ips:
+  stack-seed: 172.16.32.11
+  stack-seed-hypervisor: 172.16.32.9

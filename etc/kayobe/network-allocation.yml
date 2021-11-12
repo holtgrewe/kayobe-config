@@ -1,3 +1,20 @@
 compute_net_ips:
-  stack-seed: 172.16.32.11
+  stack-seed: 172.16.32.10
   stack-seed-hypervisor: 172.16.32.9
+  stack-1: 172.16.32.11
+  stack-2: 172.16.32.12
+  stack-3: 172.16.32.13
+  stack-4: 172.16.32.14
+  med0252: 172.16.32.20
+
+cephcluster_net_ips:
+  stack-1: 192.168.2.11
+  stack-2: 192.168.2.12
+  stack-3: 192.168.2.13
+  stack-4: 192.168.2.14
+
+back_bond_ips:
+  stack-1: 192.168.2.11
+  stack-2: 192.168.2.12
+  stack-3: 192.168.2.13
+  stack-4: 192.168.2.14

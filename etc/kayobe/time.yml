@@ -5,7 +5,7 @@
 # Timezone.
 
 # Name of the local timezone.
-#timezone:
+timezone: Europe/Berlin
 
 ###############################################################################
 # Network Time Protocol (NTP).

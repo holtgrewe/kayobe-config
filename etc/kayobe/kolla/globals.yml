@@ -1,2 +1,16 @@
 ---
 # Add extra Kolla global configuration here.
+
+glance_backend_ceph: "yes"
+cinder_backend_ceph: "yes"
+nova_backend_ceph: "yes"
+gnocchi_backend_storage: "ceph"
+
+enable_manila_backend_cephfs_native: "yes"
+manila_cephfs_filesystem_name: manila
+
+enable_cinder: "yes"
+enable_manila: "yes"
+enable_manila_backend_generic: "yes"  # TOOD: really?
+
+enable_neutron_provider_networks: "yes"

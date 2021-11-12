@@ -8,11 +8,13 @@
 # Address to use to access a host's BMC via IPMI.
 #ipmi_address:
 
+# NOTE: we COULD make this configurable / more fine-grained
 # Username to use to access a host's BMC via IPMI.
-#ipmi_username:
+ipmi_username: root
 
+# NOTE: we COULD make this configurable / more fine-grained
 # Password to use to access a host's BMC via IPMI.
-#ipmi_password:
+ipmi_password: calvin
 
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
